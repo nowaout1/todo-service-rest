@@ -1,0 +1,16 @@
+[package]
+name = "todo-postgres"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+todo-repository = { path = "../todo-repository" }
+
+chrono = { version = "0.4.42", features = ["serde"] }
+serde = { version = "1.0.219", features = ["derive"] }
+uuid = { version = "1.18.1", features = ["serde"] }
+sqlx = { version = "0.8.6", features = ["postgres", "time"] }
+tokio = { version = "1.47.1", features = ["rt-multi-thread"] }
+async-trait = "0.1.89"
+dotenvy = "0.15.7"
+tracing = "0.1.41"
